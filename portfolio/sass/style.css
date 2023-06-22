@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Zen+Kaku+Gothic+New&display=swap");
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  line-height: 1.7;
+}
+
+.inner {
+  margin: 0 0 120px 170px;
+  padding: 2% 0;
+}
+
+.section-title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.btn a {
+  background: #fff;
+  font-weight: 700;
+  border: 0.5px solid #333;
+  padding: 20px 0;
+  display: block;
+  letter-spacing: 1.7px;
+  color: #333;
+  transition: all 0.5s ease 0s;
+  text-align: center;
+}
+.btn a:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* HEADER
+--------------------------- */
+#header {
+  font-family: "Inconsolata", monospace;
+  width: 100px;
+  height: 90vh;
+  margin: 30px;
+  padding: 20px;
+  background: #333;
+  position: fixed;
+  z-index: 10;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  border: 0.5px solid #333;
+  width: 110px;
+  height: 91.5vh;
+  top: -5px;
+  left: -5px;
+}
+
+.logo {
+  font-size: 10px;
+  position: relative;
+  background-color: #fff;
+  padding: 12px 7px;
+  width: 60px;
+  height: 60px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  border: 0.5px solid #fff;
+  width: 65px;
+  height: 65px;
+  top: -3px;
+  left: -3px;
+}
+.logo:hover {
+  opacity: 0.7;
+  border: none;
+}
+
+.logo-space {
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+.logo-space::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: rgb(95, 149, 88);
+  top: 50%;
+  left: 5px;
+}
+
+.header__items {
+  margin-left: auto;
+  padding: 8px;
+}
+
+.header__item a {
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  transition: all 0.5s ease 0s;
+}
+.header__item a:hover {
+  opacity: 0.7;
+  border-bottom: 2px solid #fff;
+  padding: 8.3px 0;
+}
+
+/* MAIN VISUAL
+--------------------------- */
+#main-visual {
+  height: 100vh;
+  position: relative;
+}
+#main-visual::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 50%;
+  height: 100%;
+}
+#main-visual::after {
+  content: "";
+  position: absolute;
+  background: url(/image/main-visual.jpg) no-repeat top right/cover;
+  opacity: 0.8;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+.main-visual__title {
+  text-align: center;
+  transform: translate(-50%);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 7rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+  z-index: 10;
+}
+.main-visual__title span {
+  opacity: 0;
+}
+.main-visual__title.appeartext span {
+  animation: text_anime_on 1s ease-out forwards;
+}
+.main-visual__title::before {
+  content: "2023 copy right malyun .";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  background-color: #333;
+  color: #fff;
+  line-height: 1.7;
+}
+
+@keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scrolldown {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 10;
+}
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #333;
+  animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+.scrolldown::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 90px;
+  background: #333;
+}
+
+@keyframes circlemove {
+  0% {
+    bottom: 90px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ABOUT
+--------------------------- */
+#about {
+  background: url(../image/about.jpg) no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+}
+#about::before {
+  content: "";
+  background: #fff;
+  width: 100.1%;
+  height: calc(100vh - 40%);
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+}
+
+.about__inner {
+  padding: 0;
+}
+
+.about__container {
+  padding-top: 15%;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+
+.about__content-main {
+  border: 0.5px solid #eee;
+  height: 100%;
+  width: 33.3333333333%;
+  padding: 50px 12px;
+}
+
+.about__title {
+  color: #333;
+  padding-right: 20px;
+  position: relative;
+  text-align: right;
+}
+
+.about__content {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.about__content-item {
+  margin-right: 40px;
+}
+
+.about__day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #aaa9a9;
+}
+
+.about__img {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+}
+.about__img img {
+  width: 300px;
+  height: 300px;
+}
+
+/* WORK
+--------------------------- */
+#works {
+  background: url(../image/works.jpg) no-repeat center center/cover;
+  height: 100vh;
+}
+
+.works__title {
+  font-weight: normal;
+}
+
+.works__items {
+  display: flex;
+  align-items: center;
+}
+
+.works__item {
+  margin-right: 40px;
+  width: 25%;
+  height: 250px;
+  background: #eee;
+  overflow: hidden;
+}
+.works__item a {
+  display: block;
+  height: 100%;
+}
+.works__item a img {
+  transition: 1s all;
+}
+.works__item a img:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1s all;
+}
+.works__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.works__btn {
+  margin-top: 40px;
+}
+.works__btn a {
+  width: 150px;
+}
+
+/* SKILL
+--------------------------- */
+.skill__title {
+  font-weight: normal;
+  background: url(../image/skill.jpg) no-repeat top center/cover;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.skill__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill__content {
+  margin-right: 30px;
+  width: 100%;
+  height: 300px;
+  border: 0.5px solid #333;
+  padding: 2%;
+}
+
+.skill__require {
+  position: relative;
+}
+.skill__require::before {
+  content: "coming!soon!";
+  position: absolute;
+  background-color: rgba(255, 255, 0, 0.6);
+  color: rgba(255, 0, 0, 0.6);
+  font-size: 3.8rem;
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  transform: rotate(-43deg);
+  top: 85px;
+  left: -18%;
+  padding: 0 10px;
+}
+
+.skill__content-title {
+  background: #333;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.skill__content-text {
+  letter-spacing: 1.5px;
+}
+
+.skill__btn a {
+  width: 200px;
+  padding: 20px 0;
+  margin: 20px auto 0;
+}
+
+/* CONTACT
+--------------------------- *//*# sourceMappingURL=style.css.map */
